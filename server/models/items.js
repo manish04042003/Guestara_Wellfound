@@ -1,17 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
-// Name: String
-// Image: URL
-// Description: String
-// Tax Applicability: Boolean
-// Tax: Number, if applicable
-// Base Amount: Number
-// Discount: Number
-// Total Amount: Number (Base - Discount)
-
-
 const itemsSchema = new Schema({
     name: { type: String , require : true , unique : true },
     description: { type: String },

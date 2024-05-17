@@ -1,15 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
-// Attributes to create a category:
-// Name: String
-// Image: URL
-// Description: String
-// Tax Applicability: Boolean
-// Tax: Number, if applicable
-// Tax type
-
 const categorySchema = new Schema({
     name: { type: String , require : true ,unique : true },
     description: { type: String },
