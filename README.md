@@ -27,12 +27,12 @@ Items: A Subcategory can have multiple items in it
     npm install
 
 
-Create a .env file in the root directory of your project and add the following environment variables:
+## Create a .env file in the root directory of your project and add the following environment variables:
     MONGODB_URL=your-mongodb-atlas-connection-string
     PORT_NO=3000
 
 
-Running the Application
+### Running the Application
     ```sh
     npm start
 
