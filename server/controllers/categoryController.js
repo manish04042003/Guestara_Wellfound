@@ -39,7 +39,7 @@ const getAllCategory = async (req, res) => {
 
 const getCategoryById = async (req, res) => {
     const _id = req.params.id;
-    await Category.find({ _id }).then((data) => {
+    await Category.find({_id }).then((data) => {
         res.status(200).json({
             message: "success",
             data: data
