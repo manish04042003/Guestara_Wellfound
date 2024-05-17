@@ -15,6 +15,11 @@ const itemsSchema = new Schema({
 }, { timestamps: true }
 );
 
+itemsSchema.pre('save', function(next) {
+    this.total_amount = this.base_amount - this.discount;
+    next();
+});
+
 
 
 module.exports = mongoose.model("items", itemsSchema);

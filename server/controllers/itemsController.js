@@ -1,8 +1,8 @@
 const Items = require('../models/items');
 
 const createItem = async (req, res) => {
-    const { name, description, image, category, subcategory, tax_applicability, tax, base_amount, discount, total_amount, status } = req.body;
-    let item = new Items({ name, description, image, category, subcategory, tax_applicability, tax, base_amount, discount, total_amount, status });
+    const { name, description, image, category, subcategory, tax_applicability, tax, base_amount, discount, status } = req.body;
+    let item = new Items({ name, description, image, category, subcategory, tax_applicability, tax, base_amount, discount, status });
     await item.save().then(() => {
         res.status(200).json({
             message: "success",
